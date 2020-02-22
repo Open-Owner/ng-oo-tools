@@ -2,7 +2,7 @@
     "name": "open-owner",
     "version": "0.0.1",
     "scripts": {
-        "build": "ng build && npm run build:post",
+        "build": "ng build oo-lib --prod && npm run build:post",
         "build:post": "npm run build:post:copyStyles && npm run build:post:copyTranslations",
         "build:post:copyStyles": "shx mkdir -p dist/oo-lib/styles && shx cp -r oo-lib/src/styles/* dist/oo-lib/styles",
         "build:post:copyTranslations": "shx mkdir -p dist/oo-lib/locales && shx cp -r oo-lib/src/locales/* dist/oo-lib/locales",
