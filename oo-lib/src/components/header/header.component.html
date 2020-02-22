@@ -1,0 +1,26 @@
+<mat-toolbar class="toolbar">
+    <a routerLink="/"> <img alt="Logo" class="toolbar-logo" [src]="logo" /> </a>
+    <div fxFlex>
+        <ng-content select="[header-left-slot]"></ng-content>
+    </div>
+    <div class="flex-spacer"></div>
+    <div class="toolbar-login-button toolbar-right">
+        <div fxFlex>
+            <ng-content select="[header-right-slot]"></ng-content>
+        </div>
+        <span *ngIf="auth.user as user; else signin">
+            <a [matMenuTriggerFor]="profileMenu" class="profile-menu">
+                <span class="profile-photo-container">
+                    <img alt="user-image" [src]="user.photoUrl + '?sz=40'" *ngIf="user.photoUrl && user.photoUrl.includes('googleusercontent.com')" />
+                    <mat-icon class="toolbar-person-icon" *ngIf="!user.photoUrl">person</mat-icon>
+                </span>
+                <mat-icon class="toolbar-dropdown-icon">keyboard_arrow_down</mat-icon>
+            </a>
+            <mat-menu #profileMenu="matMenu">
+                <button mat-menu-item>{{ 'profile' | l10n }}</button>
+                <button mat-menu-item (click)="signOut()">{{ 'signOut' | l10n }}</button>
+            </mat-menu>
+        </span>
+    </div>
+</mat-toolbar>
+<ng-template #signin><a type="button" mat-stroked-button routerLink="/sign-in">{{ 'signIn' | l10n }}</a></ng-template>

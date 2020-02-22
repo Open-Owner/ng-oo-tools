@@ -1,0 +1,17 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex>
+        <ng-content select="[footer-left-slot]"></ng-content>
+    </div>
+    <div fxFlex fxLayout="column" fxLayoutAlign="start center">
+        <a
+            *ngFor="let link of links; trackBy: util.trackByIndex"
+            [routerLink]="link.routerLink"
+            style="font-size: 14px;"
+        >
+            {{ link.label }}
+        </a>
+    </div>
+    <div fxFlex>
+        <ng-content select="[footer-right-slot]"></ng-content>
+    </div>
+</mat-toolbar>
