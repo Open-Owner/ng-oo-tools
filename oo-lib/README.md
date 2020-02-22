@@ -1,24 +1,40 @@
-# OoLib
+# Open Owner Angular Tools
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.9.
+Common components, services, and pipes to help you make Angular apps faster.
 
-## Code scaffolding
+### Contents
 
-Run `ng generate component component-name --project oo-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project oo-lib`.
-> Note: Don't forget to add `--project oo-lib` or else it will be added to the default project in your `angular.json` file. 
+- [Getting Started](#getting-started)
+- [Translations](#translations)
 
-## Build
+### Getting Started
 
-Run `ng build oo-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+##### Requirements
 
-## Publishing
+* Node.js 10.13+
+* Angular 9+
 
-After building your library with `ng build oo-lib`, go to the dist folder `cd dist/oo-lib` and run `npm publish`.
+##### Installation in Your App
 
-## Running unit tests
+`npm i @oo/ng-tools`
 
-Run `ng test oo-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Translations
+The library has many common translations already available for localization (l10n).
+Things like save, cancel, ok, etc… that every app will use.
 
-## Further help
+#### How It Works
+All you have to do is use a pipe or use the service method to get the translation for the user's language.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If any phrase is NOT found in the user's chosen locale it will fallback to the english version. 
+ 
+Example:
+
+```
+{{ 'ok' | l10n }}:
+```
+
+or 
+
+```
+this.localization.translate('save')
+```
