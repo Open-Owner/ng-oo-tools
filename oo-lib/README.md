@@ -16,7 +16,7 @@ Common components, services, and pipes to help you make Angular apps faster.
 
 ##### Installation in Your App
 
-`npm i @oo/ng-tools`
+`npm i @openowner/ng-tools`
 
 ### Translations
 The library has many common translations already available for localization (l10n).
