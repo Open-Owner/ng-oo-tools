@@ -1,1 +1,1 @@
-export { LocalizationPipe, LocalizationPipeModule } from './localization.pipe';
+export { LocalizationPipe } from './localization.pipe';

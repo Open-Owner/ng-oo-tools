@@ -1,7 +1,8 @@
-export * from './services';
-export * from './guards';
-export * from './directives';
-export * from './pipes';
-export * from './components';
-export * from './interfaces';
 export * from './oo-lib.module';
+
+export * from './services/index';
+export * from './guards/index';
+export * from './directives/index';
+export * from './pipes/index';
+export * from './components/index';
+export * from './interfaces/index';

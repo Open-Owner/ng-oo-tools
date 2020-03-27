@@ -1,8 +1,8 @@
-import { firestore } from 'firebase';
+import * as firebase from 'firebase/app';
 import { FirestoreDoc } from './utility.interface';
 
 export interface Settings extends FirestoreDoc {
     userId: string;
-    createDate: firestore.Timestamp;
+    createDate: firebase.firestore.Timestamp;
     [key: string]: any;
 }

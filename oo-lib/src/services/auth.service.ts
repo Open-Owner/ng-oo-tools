@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { firestore } from 'firebase';
 import * as firebase from 'firebase/app';
+import 'firebase/firestore';
 import { Observable, Subject, of } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 
@@ -86,7 +86,7 @@ export class AuthService {
     public addSettings(user: firebase.User | null): void {
         const data: Settings = {
             userId: user.uid,
-            createDate: firestore.Timestamp.fromDate(new Date()),
+            createDate: firebase.firestore.Timestamp.fromDate(new Date()),
         };
         firebase
             .firestore()

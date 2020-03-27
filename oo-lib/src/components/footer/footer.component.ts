@@ -1,14 +1,17 @@
 import { Component, Input } from '@angular/core';
-import { IFooterLink } from './footer.interface';
 
-import { LocalizationService, UtilityService } from '../../services';
+import { IFooterLink } from './footer.interface';
+import {
+    LocalizationService,
+    UtilityService
+} from '../../services/index';
 
 @Component({
     selector: 'oo-footer',
     templateUrl: './footer.component.html',
 })
 export class FooterComponent {
-
+    @Input() public color: 'primary' | 'accent' | 'warn' = 'accent';
     @Input() public links: IFooterLink[] = [
         {
             routerLink: '/terms',

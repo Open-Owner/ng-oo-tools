@@ -1,52 +1,70 @@
 # Open Owner Angular Tools
 
-Common components, services, and pipes to help you make Angular apps faster. 
+Common components, services, and pipes to help you make Angular apps faster.
 This library makes use of Angular Material and Firebase heavily since they will speed up the development of your app.
 
+## Contents
 
-### Contents
+-   [Getting Started](#getting-started)
+-   [Publishing](#publishing)
+-   [Translations](#translations)
 
-- [Getting Started](#getting-started)
-- [Translations](#translations)
+## Getting Started
 
-
-### Getting Started
-
-##### Installation in Your App
+### Installation in Your App
 
 `npm i @oo/ng-tools`
 
+## Publishing
 
-### Translations
-We provide a simplified localization system to translate phrases into the user's locale (ie language). 
+To publish updates to NPM do the following:
+
+-   Send a PR in GitHub and get your code merged to the Master branch.
+-   In github go to releases tab and click "Draft a new release"
+    -   Tag the version the same as the version in oo-lib/package.json but with a v at the front like `v0.0.4`
+    -   Make release title the same `v0.0.4`
+    -   Write a description
+    -   Select the branch to release
+-   Click "Publish release"
+
+This will push the code automatically to NPM. You can view the progress on the Actions tab.
+
+### Editing the Publish Process
+
+If you need to edit how github releases the code then edit the **.github/workflow/main.yml** file in this repo.
+
+## Translations
+
+We provide a simplified localization system to translate phrases into the user's locale (ie language).
 The library has many common translations already available for localization (l10n).
 Things like save, cancel, ok, etc… that every app will use.
 
-IMPORTANT: Angular has their own localization system based on the CLDR group's localization standards. 
-If you will be doing advanced localization and internationalization then use that instead. 
+IMPORTANT: Angular has their own localization system based on the CLDR group's localization standards.
+If you will be doing advanced localization and internationalization then use that instead.
 Our library just supplies a simpler system since most apps don't have crazy localization needs.
 
-#### Files
-Put your translation files in a **locales** folder. The translation file is just a json object with a list of keys and their translation in each language. 
+### Files
+
+Put your translation files in a **locales** folder. The translation file is just a json object with a list of keys and their translation in each language.
 English is the main file and will be used if no translation is found in the user's main language.
 
-This library follows the same pattern and supplies many common phrases already. You can override these keys in your own app. 
+This library follows the same pattern and supplies many common phrases already. You can override these keys in your own app.
 
-#### How It Works
+### How It Works
+
 All you have to do is use the `l10n` pipe or use the LocalizationService's `translate()` method to get the translation for the user's language.
- 
+
 Example:
 
 ```
 {{ 'ok' | l10n }}:
 ```
 
-or 
+or
 
 ```
 this.localization.translate('save')
 ```
-
 
 ## Firebase Integration
 
@@ -56,6 +74,7 @@ If you choose to use it here's how this library helps you.
 We utilize the angularFire2 module. See https://github.com/angular/angularfire2
 
 ### AngularFire2 Database Calls
+
 You can query for either multiple documents or a single document and listen to the `snapshotChanges()` observable for the result.
 We provide a pipe operator that adds the id and ref to our local object for ease.
 
@@ -106,4 +125,3 @@ someItem.ref
 
 someItem.ref.delete();
 ```
-

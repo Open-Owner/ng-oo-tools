@@ -1,6 +1,6 @@
 {
   "name": "@openowner/ng-tools",
-  "version": "0.0.4",
+  "version": "9.0.0",
   "description": "Common resources for Open Owner startups to make Angular apps wicked fast",
   "main": "",
   "repository": {
@@ -8,10 +8,11 @@
     "url": "https://github.com/Open-Owner/ng-tools"
   },
   "peerDependencies": {
-    "@angular/common": ">=9",
-    "@angular/core": ">=9",
-    "@angular/flex-layout": ">=9",
-    "@angular/material": ">=9"
+    "@angular/cdk": ">=9 <10",
+    "@angular/common": ">=9 <10",
+    "@angular/core": ">=9 <10",
+    "@angular/flex-layout": ">=9 <10",
+    "@angular/material": ">=9 <10"
   },
   "schematics": "./schematics/collection.json",
   "scripts": {

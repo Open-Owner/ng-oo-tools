@@ -15,5 +15,8 @@ import { LoadingOverlayComponent } from './loading-overlay.component';
     exports: [
         LoadingOverlayComponent,
     ],
+    entryComponents: [
+        LoadingOverlayComponent,
+    ]
 })
 export class LoadingOverlayModule {}

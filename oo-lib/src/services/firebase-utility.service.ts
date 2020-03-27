@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, DocumentChangeAction, DocumentSnapshot, QueryDocumentSnapshot } from '@angular/fire/firestore';
-import { firestore } from 'firebase';
+import * as firebase from 'firebase/app';
+import 'firebase/firestore';
 import { OperatorFunction } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -77,7 +78,7 @@ export class FirebaseUtilityService {
             return field as undefined;
         }
 
-        return (field as firestore.Timestamp).toDate();
+        return (field as firebase.firestore.Timestamp).toDate();
     }
 
     public trackById(index: number, doc: FirestoreDoc): string {

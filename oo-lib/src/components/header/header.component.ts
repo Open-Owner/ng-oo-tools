@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 import { UtilityService } from '../../services/utility.service';
-import { LocalizationService } from '../../services';
+import { LocalizationService } from '../../services/index';
 
 @Component({
     selector: 'oo-header',
@@ -13,6 +13,7 @@ import { LocalizationService } from '../../services';
 })
 export class HeaderComponent {
     @Input() public logo: string;
+    @Input() public color: 'primary' | 'accent' | 'warn' = 'primary';
 
     @ViewChild('sideNav', { static: true }) public sideNav: MatSidenav;
 
