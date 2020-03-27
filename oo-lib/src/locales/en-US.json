@@ -2,10 +2,11 @@
     "areYouSure": "Are You Sure?",
     "no": "No",
     "organization": "Organization",
+    "profile": "Profile",
     "privacyPolicy": "Privacy Policy",
-    "termsAndConditions": "Terms and Conditions",
-    "yes": "Yes",
+    "problemSigningOut": "There was a problem signing out.",
     "signIn": "Sign In",
     "signOut": "Sign Out",
-    "problemSigningOut": "There was a problem signing out."
+    "termsAndConditions": "Terms and Conditions",
+    "yes": "Yes"
 }

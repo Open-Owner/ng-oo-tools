@@ -39,6 +39,8 @@ export class AuthService {
             this.fbUtil.mapDoc<User>(),
             tap((user: User) => {
                 if (!user) {
+                    this.user = null;
+
                     return;
                 }
 

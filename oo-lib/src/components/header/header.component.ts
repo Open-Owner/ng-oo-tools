@@ -10,6 +10,7 @@ import { LocalizationService } from '../../services/index';
 @Component({
     selector: 'oo-header',
     templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
     @Input() public logo: string;

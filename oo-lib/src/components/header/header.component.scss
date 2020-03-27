@@ -1,0 +1,45 @@
+.toolbar {
+    &-person-icon {
+        color: white;
+        height: 40px;
+    }
+
+    &-dropdown-icon {
+        color: white;
+        margin-left: 5px;
+    }
+
+    &-login-button {
+        margin-left: 20px;
+
+        a {
+            font-size: 15px;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: darken(white, 20%);
+            }
+
+            &.profile-menu {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+
+        .profile-photo-container {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
